@@ -5,7 +5,7 @@
     <classes>
       <class name="jp.imanaga.marklogic_util.QueryRunnerTest">
         <methods>
-          <include name="testAbnormalQuery"/>
+          <include name="normal" invocation-numbers="2"/>
         </methods>
       </class> <!-- jp.imanaga.marklogic_util.QueryRunnerTest -->
     </classes>

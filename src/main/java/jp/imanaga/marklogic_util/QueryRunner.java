@@ -1,8 +1,10 @@
 package jp.imanaga.marklogic_util;
 
+import java.util.List;
+
 import com.marklogic.xcc.exceptions.RequestException;
 
 public interface QueryRunner {
 
-	String[] exec(String query) throws RequestException;
+	List<Result> exec(String query) throws RequestException;
 }

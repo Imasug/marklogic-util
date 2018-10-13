@@ -4,11 +4,14 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.marklogic.xcc.ContentSource;
 import com.marklogic.xcc.ContentSourceFactory;
 import com.marklogic.xcc.Request;
+import com.marklogic.xcc.ResultItem;
 import com.marklogic.xcc.ResultSequence;
 import com.marklogic.xcc.Session;
 import com.marklogic.xcc.exceptions.RequestException;
@@ -27,13 +30,28 @@ public class QueryRunnerImpl implements QueryRunner {
 		this.session = contentSource.newSession();
 	}
 
-	public String[] exec(String query) throws RequestException {
+	public ResultSequence submit(String query) throws RequestException {
 
 		assert query != null;
 
 		Request request = this.session.newAdhocQuery(query);
-		ResultSequence resultSequence = session.submitRequest(request);
-		String[] results = resultSequence.asStrings();
+
+		return session.submitRequest(request);
+	}
+
+	@Override
+	public List<Result> exec(String query) throws RequestException {
+
+		ResultSequence resultSequence = this.submit(query);
+
+		List<Result> results = new ArrayList<>();
+		while (resultSequence.hasNext()) {
+			ResultItem item = resultSequence.next();
+			Result result = new Result();
+			result.setUri(item.getDocumentURI());
+			result.setValue(item.asString());
+			results.add(result);
+		}
 
 		return results;
 	}
@@ -49,7 +67,7 @@ public class QueryRunnerImpl implements QueryRunner {
 		String query = args[1];
 
 		QueryRunner queryRunner = new QueryRunnerImpl(serverURI);
-		String[] results = queryRunner.exec(query);
+		List<Result> results = queryRunner.exec(query);
 
 		// TODO test
 		Response response = new Response();

@@ -1,12 +1,14 @@
 package jp.imanaga.marklogic_util;
 
+import java.util.List;
+
 public class Response {
 
 	private String serverURI;
 
 	private String query;
 
-	private String[] results;
+	private List<Result> results;
 
 	private String execTime;
 
@@ -26,11 +28,11 @@ public class Response {
 		this.query = query;
 	}
 
-	public String[] getResults() {
+	public List<Result> getResults() {
 		return results;
 	}
 
-	public void setResults(String[] results) {
+	public void setResults(List<Result> results) {
 		this.results = results;
 	}
 
