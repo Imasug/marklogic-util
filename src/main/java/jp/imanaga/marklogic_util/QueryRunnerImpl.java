@@ -2,6 +2,8 @@ package jp.imanaga.marklogic_util;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.marklogic.xcc.ContentSource;
@@ -50,7 +52,14 @@ public class QueryRunnerImpl implements QueryRunner {
 		String[] results = queryRunner.exec(query);
 
 		// TODO test
+		Response response = new Response();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		response.setExecTime(LocalDateTime.now().format(formatter));
+		response.setServerURI(serverURI);
+		response.setQuery(query);
+		response.setResults(results);
+
 		ObjectMapper objectMapper = new ObjectMapper();
-		System.out.println(objectMapper.writeValueAsString(results));
+		System.out.println(objectMapper.writeValueAsString(response));
 	}
 }

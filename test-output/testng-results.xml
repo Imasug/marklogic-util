@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="159" started-at="2018-10-13T13:51:57Z" finished-at="2018-10-13T13:51:57Z">
+  <suite name="Default suite" duration-ms="180" started-at="2018-10-13T16:09:13Z" finished-at="2018-10-13T16:09:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="159" started-at="2018-10-13T13:51:57Z" finished-at="2018-10-13T13:51:57Z">
+    <test name="Default test" duration-ms="180" started-at="2018-10-13T16:09:13Z" finished-at="2018-10-13T16:09:13Z">
       <class name="jp.imanaga.marklogic_util.QueryRunnerTest">
-        <test-method status="PASS" signature="normal(java.lang.String, [Ljava.lang.String;)[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="normal" duration-ms="104" started-at="2018-10-13T13:51:57Z" data-provider="query" finished-at="2018-10-13T13:51:57Z">
+        <test-method status="PASS" signature="normal(java.lang.String, [Ljava.lang.String;)[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="normal" duration-ms="120" started-at="2018-10-13T16:09:13Z" data-provider="query" finished-at="2018-10-13T16:09:13Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- normal -->
-        <test-method status="PASS" signature="normal(java.lang.String, [Ljava.lang.String;)[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="normal" duration-ms="4" started-at="2018-10-13T13:51:57Z" data-provider="query" finished-at="2018-10-13T13:51:57Z">
+        <test-method status="PASS" signature="normal(java.lang.String, [Ljava.lang.String;)[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="normal" duration-ms="4" started-at="2018-10-13T16:09:13Z" data-provider="query" finished-at="2018-10-13T16:09:13Z">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- normal -->
-        <test-method status="PASS" signature="normal(java.lang.String, [Ljava.lang.String;)[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="normal" duration-ms="7" started-at="2018-10-13T13:51:57Z" data-provider="query" finished-at="2018-10-13T13:51:57Z">
+        <test-method status="PASS" signature="normal(java.lang.String, [Ljava.lang.String;)[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="normal" duration-ms="6" started-at="2018-10-13T16:09:13Z" data-provider="query" finished-at="2018-10-13T16:09:13Z">
           <params>
             <param index="0">
               <value>
@@ -55,7 +55,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- normal -->
-        <test-method status="PASS" signature="testAbnormalConnection()[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="testAbnormalConnection" duration-ms="2" started-at="2018-10-13T13:51:57Z" finished-at="2018-10-13T13:51:57Z">
+        <test-method status="PASS" signature="testAbnormalConnection()[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="testAbnormalConnection" duration-ms="3" started-at="2018-10-13T16:09:13Z" finished-at="2018-10-13T16:09:13Z">
           <exception class="com.marklogic.xcc.exceptions.XccConfigException">
             <message>
               <![CDATA[Unrecognized connection scheme: null]]>
@@ -64,7 +64,7 @@
               <![CDATA[com.marklogic.xcc.exceptions.XccConfigException: Unrecognized connection scheme: null
 at com.marklogic.xcc.ContentSourceFactory.newContentSource(ContentSourceFactory.java:146)
 at com.marklogic.xcc.ContentSourceFactory.newContentSource(ContentSourceFactory.java:187)
-at jp.imanaga.marklogic_util.QueryRunnerImpl.<init>(QueryRunnerImpl.java:23)
+at jp.imanaga.marklogic_util.QueryRunnerImpl.<init>(QueryRunnerImpl.java:24)
 at jp.imanaga.marklogic_util.QueryRunnerTest.testAbnormalConnection(QueryRunnerTest.java:55)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -97,7 +97,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAbnormalConnection -->
-        <test-method status="PASS" signature="testAbnormalQuery()[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="testAbnormalQuery" duration-ms="10" started-at="2018-10-13T13:51:57Z" finished-at="2018-10-13T13:51:57Z">
+        <test-method status="PASS" signature="testAbnormalQuery()[pri:0, instance:jp.imanaga.marklogic_util.QueryRunnerTest@c038203]" name="testAbnormalQuery" duration-ms="11" started-at="2018-10-13T16:09:13Z" finished-at="2018-10-13T16:09:13Z">
           <exception class="com.marklogic.xcc.exceptions.XQueryException">
             <message>
               <![CDATA[Missing context item]]>
@@ -113,7 +113,7 @@ at com.marklogic.xcc.impl.handlers.EvalRequestController.serverDialog(EvalReques
 at com.marklogic.xcc.impl.handlers.AbstractRequestController.runRequest(AbstractRequestController.java:87)
 at com.marklogic.xcc.impl.SessionImpl.submitRequestInternal(SessionImpl.java:486)
 at com.marklogic.xcc.impl.SessionImpl.submitRequest(SessionImpl.java:481)
-at jp.imanaga.marklogic_util.QueryRunnerImpl.exec(QueryRunnerImpl.java:32)
+at jp.imanaga.marklogic_util.QueryRunnerImpl.exec(QueryRunnerImpl.java:33)
 at jp.imanaga.marklogic_util.QueryRunnerTest.testAbnormalQuery(QueryRunnerTest.java:62)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
